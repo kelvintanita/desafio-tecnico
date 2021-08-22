@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Migrations\201812271534.sql" />
+    <None Remove="Migrations\201812271535.sql" />
+    <None Remove="Migrations\201812271536.sql" />
+    <None Remove="Migrations\201812301640.sql" />
+    <None Remove="Migrations\201902132146.sql" />
+    <None Remove="Migrations\201902132147.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812271534.sql" />
+    <EmbeddedResource Include="Migrations\201812271535.sql" />
+    <EmbeddedResource Include="Migrations\201812271536.sql" />
+    <EmbeddedResource Include="Migrations\201812301640.sql" />
+    <EmbeddedResource Include="Migrations\201902132146.sql" />
+    <EmbeddedResource Include="Migrations\201902132147.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.6.2" />
+    <PackageReference Include="dbup-sqlserver" Version="4.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DesafioTecnico.Domain\DesafioTecnico.Domain.csproj" />
+    <ProjectReference Include="..\DesafioTecnico.Infra\DesafioTecnico.Infra.csproj" />
+  </ItemGroup>
+
+</Project>
